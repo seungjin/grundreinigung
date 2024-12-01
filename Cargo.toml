@@ -1,0 +1,28 @@
+[package]
+name = "grundreinigung"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.93"
+clap = { version = "4.5.21", features = ["derive"] }
+openssh = { version = "0.11.4", features = ["native-mux"] }
+openssh-mux-client = "0.17.6"
+result = "1.0.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1.41.1", features = [
+    "process",
+    "io-util",
+    "macros",
+    "net",
+    "rt-multi-thread",
+] }
+futures = "0.3"
+tokio-test = "0.4.2"
+async-recursion = "1.1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[build-dependencies]
+chrono = "0.4"
